@@ -18,6 +18,7 @@ This repository contains examples of recursion and sorting algorithms implemente
 <h2>🛠️ Built with</h2>
 <ul>
   <li>JavaScript</li>
+  <li>ESlint</li>
 </ul>
 
 This project is part of The Odin Project Curriculum: https://www.theodinproject.com/
