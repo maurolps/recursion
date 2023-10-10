@@ -1,18 +1,18 @@
-const newArr = []
+const newArr = [];
 
 function merge(arr, l, mid, h) {
   const arrayL = arr[l];
   const arrayH = arr[h];
-   if(l === mid) {
+  if (l === mid) {
     if (arrayL < arrayH) return;
     arr[l] = arrayH;
     arr[h] = arrayL;
     newArr[l] = arrayH;
     newArr[h] = arrayL;
     return;
-  } 
-  
-  let j = mid+1;
+  }
+
+  let j = mid + 1;
   let index = l;
   const bkArr = [...newArr];
 
@@ -20,7 +20,7 @@ function merge(arr, l, mid, h) {
     if (j > h) {
       for (let k = i; k <= mid; k++) {
         newArr[index] = bkArr[k];
-        index++
+        index++;
       }
       break;
     }
@@ -40,23 +40,23 @@ function merge(arr, l, mid, h) {
       i--;
       j++;
     }
-   index++ 
+    index++;
   }
 }
 
-function mergeSort (arr, l = 0, h = null) {
-  if (h === null) h = arr.length-1;
+function mergeSort(arr, l = 0, h = null) {
+  if (h === null) h = arr.length - 1;
   if (l < h) {
-    const mid = parseInt((l+h)/2);
+    const mid = parseInt((l + h) / 2);
     mergeSort(arr, l, mid);
-    mergeSort(arr, mid+1, h);
+    mergeSort(arr, mid + 1, h);
     merge(arr, l, mid, h);
     console.log('saida1');
-  } 
+  }
   console.log('saida2');
 }
 
-const arr = [9,3,7,5,6,4,8,2];
+const arr = [9, 3, 7, 5, 6, 4, 8, 2];
 
 mergeSort(arr);
 console.log(newArr); // [2, 3, 4, 5, 6, 7, 8, 9]
