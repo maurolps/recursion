@@ -51,9 +51,7 @@ function mergeSort(arr, l = 0, h = null) {
     mergeSort(arr, l, mid);
     mergeSort(arr, mid + 1, h);
     merge(arr, l, mid, h);
-    console.log('saida1');
   }
-  console.log('saida2');
 }
 
 const arr = [9, 3, 7, 5, 6, 4, 8, 2];
